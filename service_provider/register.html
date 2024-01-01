@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Login</title>
+  <link rel="stylesheet" href="../styles/style_login.css">
+  <link rel="stylesheet" href="../styles/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<section class="header">
+  <nav>
+    <a href="index.html"><img src="../images/cookie.png"></a>
+    <div class="nav-links">
+      <ul>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="about.html">ABOUT</a></li>
+        <li><a href="contact.html">CONTACT</a></li>
+        <li><a href="login.html">LOGIN</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="login-container">
+    <h2>User Register</h2>
+    <form class="login-form">
+      <div class="input-group">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" placeholder="Enter your username" required>
+      </div>
+      <div class="input-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Enter your password" required>
+      </div>
+      <p>Sie haben schon einen Account? <a href="login.html">Klicken Sie hier</a></p>
+      <button type="submit" class="login-btn primary">Register</button>
+      <button type="button" class="login-btn secondary" onclick="loginWithCookieID()">mit CookieID anmelden</button>
+    </form>
+  </div>
+  <script>
+    function loginWithCookieID() {
+      window.location.href = 'http://localhost:3000/my-page';
+    }
+  </script>
+
+</section>
+</body>
+</html>

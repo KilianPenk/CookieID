@@ -1,34 +1,64 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User Login</title>
-    <link rel="stylesheet" href="../styles/style_login.css">
+    <meta name="viewport" content="with=device-width, initial-scale=1.0">
+    <title>SP-Provider</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
-<div class="login-container">
-    <h2>User Login</h2>
-    <form class="login-form">
-        <div class="input-group">
-            <label for="username">Username</label>
-            <input type="text" id="username" name="username" placeholder="Enter your username" required>
+<section class="header">
+    <nav>
+        <a href="index.html"><img src="../images/cookie.png"></a>
+        <div class="nav-links">
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+                <li><a href="login.html">LOGIN</a></li>
+            </ul>
         </div>
-        <div class="input-group">
-            <label for="password">Password</label>
-            <input type="password" id="password" name="password" placeholder="Enter your password" required>
-        </div>
-        <button type="submit" class="login-btn primary">Login</button>
-        <button type="button" class="login-btn secondary" onclick="loginWithCookieID()">mit CookieID anmelden</button>
-    </form>
-</div>
-<script>
-    function loginWithCookieID() {
-        window.location.href = 'http://localhost:3000/my-page';
-    }
-</script>
-</body>
+    </nav>
 
+    <div class="text-box">
+        <h1>This is the SP for Cookie-ID</h1>
+        <p>SSO is very important for any kind of company. With Cookie-ID you can manage your
+            accounts easily and safe.<br>This is our SP for Cookie-ID. We hope more SP are following!</p>
+        <a href="contact.html" class="hero-btn">Visit Us to know More</a>
+    </div>
+</section>
+
+<!---- course ---->
+<section class="course">
+    <h1>Courses We Offer</h1>
+    <p>Lorem ipsum bla bla bla bla bla bla</p>
+
+    <div class="row">
+        <div class="course-col">
+            <h3>Intermediate</h3>
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+                tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+                At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
+                gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div class="course-col">
+            <h3>Degree</h3>
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+                tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+                At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
+                gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div class="course-col">
+            <h3>Post Graduation</h3>
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+                tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+                At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
+                gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+        </div>
+    </div>
+</section>
+
+</body>
 </html>
