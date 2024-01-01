@@ -9,6 +9,8 @@ body {
 }
 
 .login-container {
+    width: 400px;
+    margin: 0 auto;
     background-color: #fff;
     padding: 20px;
     border-radius: 8px;
