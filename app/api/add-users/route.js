@@ -7,7 +7,9 @@ const pool = createPool({
 
 export async function POST(request) {
     try {
-        const {email, password} = await request.json();
+        //const {email, password} = await request.json();
+        const email ="killer@gmail.com";
+        const password = "1234";
         console.log('Received data:', email, password);
         /*const { searchParams } = new URL(request.url);
         const email = searchParams.get('email');
@@ -17,7 +19,6 @@ export async function POST(request) {
 
         const client = await pool.connect();
 
-        //await client.query(`INSERT INTO Pets (Name, Owner) VALUES (${petName}, ${ownerName});`);
         await client.query('INSERT INTO Users (Email, Password) VALUES ($1, $2);', [email, password]);
 
 
