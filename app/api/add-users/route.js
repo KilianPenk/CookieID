@@ -8,7 +8,7 @@ const pool = createPool({
 export async function POST(request) {
     try {
         const {email, password} = await request.json();
-
+        console.log('Received data:', email, password);
         /*const { searchParams } = new URL(request.url);
         const email = searchParams.get('email');
         const password = searchParams.get('password');*/
@@ -28,6 +28,7 @@ export async function POST(request) {
         const users = result.rows;
         return NextResponse.json({ users }, { status: 200 });
     } catch (error) {
+        console.error('Error:', error);
         return NextResponse.json({ error }, { status: 500 });
     }
 }
