@@ -51,6 +51,7 @@
       const formData = new FormData(this);
       const email = formData.get('email');
       const password = formData.get('password');
+      console.log(email, password);
 
       try {
         const response = await fetch('../app/api/add-users', {
