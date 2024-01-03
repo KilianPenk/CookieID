@@ -15,7 +15,7 @@ export async function POST(request) {
         const email = searchParams.get('email');
         const password = searchParams.get('password');*/
 
-        if (!email || !password) throw new Error('Email and Password required');
+        //if (!email || !password) throw new Error('Email and Password required');
 
         const client = await pool.connect();
 
@@ -29,7 +29,7 @@ export async function POST(request) {
         const users = result.rows;
         return NextResponse.json({ users }, { status: 200 });
     } catch (error) {
-        console.error('Error:', error);
+        console.error('Error-Script:', error);
         return NextResponse.json({ error }, { status: 500 });
     }
 }
