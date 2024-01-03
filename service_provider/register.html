@@ -66,6 +66,8 @@
         // Hier könntest du je nach Antwort der API verschiedene Aktionen ausführen
       } catch (error) {
         console.error('Error:', error);
+        const text = await response.text();
+        console.log(text);
       }
     });
   </script>
