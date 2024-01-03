@@ -1,4 +1,4 @@
-/*document.getElementById('registerForm').addEventListener('submit', async function(event) {
+document.getElementById('registerForm').addEventListener('submit', async function(event) {
     event.preventDefault();
     const formData = new FormData(this);
     const email = formData.get('email');
@@ -19,7 +19,7 @@
     } catch (error) {
         console.error('Error:', error);
     }
-});*/
+});
 document.getElementById('registerForm').addEventListener('submit', async function(event) {
     event.preventDefault();
     const formData = new FormData(this);
