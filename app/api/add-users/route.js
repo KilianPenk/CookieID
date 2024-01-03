@@ -6,10 +6,6 @@ const pool = createPool({
 });
 
 export async function POST(request) {
-    /*const { searchParams } = new URL(request.url);
-    const email = searchParams.get('email');
-    const password = searchParams.get('password');*/
-
     try {
         const {email, password} = await request.json();
         if (!email || !password) throw new Error('Email and Password required');

@@ -53,7 +53,7 @@
       const password = formData.get('password');
 
       try {
-        const response = await fetch('../app/api/add-users', {
+        const response = await fetch('../app/api/add-users/route.js', {
           method: 'POST', // Hier muss die Methode korrekt gesetzt werden (GET, POST, etc.)
           headers: {
             'Content-Type': 'application/json'
