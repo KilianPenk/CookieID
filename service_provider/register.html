@@ -71,7 +71,7 @@
       }
     });*/
 
-    document.addEventListener('DOMContentLoaded', function() {
+    /*document.addEventListener('DOMContentLoaded', function() {
       const registerForm = document.getElementById('registerForm');
 
       registerForm.addEventListener('submit', function(event) {
@@ -87,6 +87,50 @@
         // URL aufrufen (in diesem Beispiel wird die URL einfach in der Konsole ausgegeben)
         console.log('Aufruf der URL:', url);
         // Hier könnten Sie die URL verwenden, um sie tatsächlich aufzurufen, z. B. mit fetch() oder anderen Methoden für HTTP-Anfragen
+
+        fetch(url)
+                .then(response => {
+                  if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                  }
+                  return response.text(); // oder .json(), .blob(), usw. abhängig von der erwarteten Antwort
+                })
+                .then(data => {
+                  // Verarbeite die Antwort hier
+                  console.log('Antwort vom Server:', data);
+                })
+                .catch(error => {
+                  console.error('Fehler beim Aufrufen der URL:', error);
+                });
+      });
+    });*/
+
+    document.addEventListener('DOMContentLoaded', function() {
+      const registerForm = document.getElementById('registerForm');
+
+      registerForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
+
+        const url = `https://cookie-id.vercel.app/app/api/add-users?email=${encodeURIComponent(email)}&password=${encodeURIComponent(password)}`;
+
+        // URL aufrufen
+        fetch(url)
+                .then(response => {
+                  if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                  }
+                  return response.text(); // oder .json(), .blob(), usw. abhängig von der erwarteten Antwort
+                })
+                .then(data => {
+                  // Verarbeite die Antwort hier
+                  console.log('Antwort vom Server:', data);
+                })
+                .catch(error => {
+                  console.error('Fehler beim Aufrufen der URL:', error);
+                });
       });
     });
   </script>
