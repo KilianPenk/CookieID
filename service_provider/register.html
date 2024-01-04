@@ -114,7 +114,7 @@
         const email = document.getElementById('email').value;
         const password = document.getElementById('password').value;
 
-        const url = 'api/add-users?email=${encodeURIComponent(email)}&password=${encodeURIComponent(password)}';
+        const url = '/api/add-users?email=${encodeURIComponent(email)}&password=${encodeURIComponent(password)}';
 
         // URL aufrufen
         fetch(url)
