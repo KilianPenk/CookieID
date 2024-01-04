@@ -1,6 +1,6 @@
 {
   "rewrites": [
-    {"source": "/(.*)", "destination": "/"}
+    {"source": "/app/api/add-users", "destination": "/"}
   ]
 }
 
