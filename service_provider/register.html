@@ -46,7 +46,7 @@
       window.location.href = 'http://localhost:3000/my-page';
     }*/
 
-    document.getElementById('registerForm').addEventListener('submit', async function(event) {
+    /*document.getElementById('registerForm').addEventListener('submit', async function(event) {
       event.preventDefault();
       const formData = new FormData(this);
       const email = formData.get('email');
@@ -69,6 +69,25 @@
         console.error('Error-HTML:', error);
         console.log("FEHLER AUFGETRETEN");
       }
+    });*/
+
+    document.addEventListener('DOMContentLoaded', function() {
+      const registerForm = document.getElementById('registerForm');
+
+      registerForm.addEventListener('submit', function(event) {
+        event.preventDefault(); // Verhindert das Standardverhalten des Formulars (das Absenden)
+
+        // Werte aus den Eingabefeldern lesen
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
+
+        // Erstellen der URL mit den Parametern
+        const url = `../app/api/add-users?email=${encodeURIComponent(email)}&password=${encodeURIComponent(password)}`;
+
+        // URL aufrufen (in diesem Beispiel wird die URL einfach in der Konsole ausgegeben)
+        console.log('Aufruf der URL:', url);
+        // Hier könnten Sie die URL verwenden, um sie tatsächlich aufzurufen, z. B. mit fetch() oder anderen Methoden für HTTP-Anfragen
+      });
     });
   </script>
 </section>

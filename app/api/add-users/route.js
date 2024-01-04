@@ -5,17 +5,17 @@ const pool = createPool({
     connectionString: 'postgres://default:ayjNn08BPSgr@ep-falling-hat-14938566-pooler.eu-central-1.postgres.vercel-storage.com:5432/verceldb',
 });
 
-export async function POST(request) {
+export async function GET(request) {
     try {
         //const {email, password} = await request.json();
-        const email ="killer@gmail.com";
-        const password = "1234";
-        console.log('Received data:', email, password);
-        /*const { searchParams } = new URL(request.url);
+        //const email ="killer@gmail.com";
+        ///const password = "1234";
+        //console.log('Received data:', email, password);
+        const { searchParams } = new URL(request.url);
         const email = searchParams.get('email');
-        const password = searchParams.get('password');*/
+        const password = searchParams.get('password');
 
-        //if (!email || !password) throw new Error('Email and Password required');
+        if (!email || !password) throw new Error('Email and Password required');
 
         const client = await pool.connect();
 
